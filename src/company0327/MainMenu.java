@@ -6,6 +6,7 @@ import java.awt.event.*;
  * 초기화면 - 메인 메뉴
  *  - 프로그램 구동후 가장 먼저 보여지는 화면
  *  - 여기에서 다른 화면으로 이동함.
+ * 
  */
 public class MainMenu extends JFrame implements ActionListener {
 	/*

@@ -38,7 +38,7 @@ public class NewEmployeeForm extends JFrame implements ActionListener {
 		JLabel nameLabel = new JLabel("사원명:");
 		JLabel genderLabel = new JLabel("성별:");
 		JLabel addressLabel = new JLabel("주소:");
-		JLabel ageLabel = new JLabel("나이:");
+		JLabel ageLabel = new JLabel("생년월일:");
 		
 		
 		JButton addButton = new JButton("추가");

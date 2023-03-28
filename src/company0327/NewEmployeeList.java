@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -28,7 +29,7 @@ public class NewEmployeeList extends JFrame implements ActionListener {
     	this.db = db;
     	
         // 테이블 세팅
-        String[] columnNames = {"사원번호", "부서명","이름","성별","주소","나이"};
+        String[] columnNames = {"사원번호", "부서명","이름","성별","주소","생년월일"};
         List<NewEmployee> newEmployeeList = db.getNewEmployeeList(); 
         Object[][] data = new Object[ newEmployeeList.size()][6];
         
@@ -45,7 +46,8 @@ public class NewEmployeeList extends JFrame implements ActionListener {
         tableModel = new DefaultTableModel(data, columnNames);
         table = new JTable(tableModel);
         
-        
+        setLocationRelativeTo(null);
+        setLayout(null);
         
         
        JButton closeButton = new JButton("닫기");
@@ -76,10 +78,11 @@ public class NewEmployeeList extends JFrame implements ActionListener {
         // 닫기 버튼도 메인 패널에 부착
         mainPanel.add(closeButton, BorderLayout.SOUTH);
         // 삭제 버튼도 메인 패널에 부착
-        mainPanel.add(removeButton, BorderLayout.WEST);
+     
+        mainPanel.add(removeButton, BorderLayout.NORTH);
 
         // 프레임(윈도우 창) 설정
-        setTitle("신규 사원 정보 입력");
+        setTitle("사원 정보 관리");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
         pack();
@@ -91,8 +94,8 @@ public class NewEmployeeList extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		 // 현재 열려있는 사원정보 화면을 닫음                
         this.dispose();
-       
         MainMenu mainMenu = new MainMenu(db);
+        
         mainMenu.setVisible(true);
 	}
 	

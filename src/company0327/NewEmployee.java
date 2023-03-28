@@ -6,7 +6,7 @@ public class NewEmployee {
 	public String name;			//이름
 	public String gender;		//성별
 	public String address;		//주소
-	public String age;			//나이
+	public String age;			//생년월일
 	
 	
 	public NewEmployee() {}

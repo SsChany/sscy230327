@@ -63,7 +63,7 @@ public class LeaveWorkList extends JFrame implements ActionListener {
         mainPanel.add(closeButton, BorderLayout.SOUTH);
 
         // 프레임(윈도우 창) 설정
-        setTitle("퇴근 입력");
+        setTitle("퇴근 기록");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
         pack();
